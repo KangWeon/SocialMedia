@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011EB121211C60F800AE55A3 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EB120211C60F800AE55A3 /* WindowController.swift */; };
 		01BE2F142119BA2C00369D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE2F132119BA2C00369D3D /* AppDelegate.swift */; };
 		01BE2F162119BA2C00369D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE2F152119BA2C00369D3D /* ViewController.swift */; };
 		01BE2F182119BA2D00369D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BE2F172119BA2D00369D3D /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		011EB120211C60F800AE55A3 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		01BE2F102119BA2C00369D3D /* SocialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE2F132119BA2C00369D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BE2F152119BA2C00369D3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				01BE2F232119BC5500369D3D /* Content */,
 				01BE2F132119BA2C00369D3D /* AppDelegate.swift */,
 				01BE2F152119BA2C00369D3D /* ViewController.swift */,
+				011EB120211C60F800AE55A3 /* WindowController.swift */,
 				01BE2F382119C59000369D3D /* SourceViewController.swift */,
 				01BE2F3E2119C5E000369D3D /* DetailViewController.swift */,
 				01BE2F172119BA2D00369D3D /* Assets.xcassets */,
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BE2F162119BA2C00369D3D /* ViewController.swift in Sources */,
+				011EB121211C60F800AE55A3 /* WindowController.swift in Sources */,
 				01BE2F142119BA2C00369D3D /* AppDelegate.swift in Sources */,
 				01BE2F392119C59000369D3D /* SourceViewController.swift in Sources */,
 				01BE2F3F2119C5E000369D3D /* DetailViewController.swift in Sources */,

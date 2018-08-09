@@ -161,7 +161,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="StormViewer" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SocialMedia" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,18 +170,45 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Storm Viewer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="480" height="270"/>
+                        <toolbar key="toolbar" implicitIdentifier="07ADB8C5-5A02-4705-B815-AC12EFE356CB" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="small" id="j93-ZN-eIM">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="qED-XA-xkP"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="IQc-Di-gbp"/>
+                                <toolbarItem implicitItemIdentifier="2E641873-2913-4CEA-9BDE-823DC47744B0" label="" paletteLabel="" image="NSShareTemplate" id="krQ-zZ-hpj">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="47" height="24"/>
+                                    <size key="maxSize" width="47" height="24"/>
+                                    <button key="view" verticalHuggingPriority="750" id="S8C-nH-W4C">
+                                        <rect key="frame" x="0.0" y="14" width="47" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSShareTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2cf-U7-Clu">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="shareClicked:" target="B8D-0N-5wS" id="0u0-f1-xnC"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="IQc-Di-gbp"/>
+                                <toolbarItem reference="krQ-zZ-hpj"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="shareButton" destination="S8C-nH-W4C" id="x6u-fy-f8O"/>
                         <segue destination="MXf-g1-zUW" kind="relationship" relationship="window.shadowedContentViewController" id="dK1-Vs-0Zy"/>
                     </connections>
                 </windowController>
@@ -189,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Split View Controller-->
+        <!--View Controller-->
         <scene sceneID="FGM-OC-9c0">
             <objects>
-                <splitViewController id="MXf-g1-zUW" sceneMemberID="viewController">
+                <splitViewController id="MXf-g1-zUW" customClass="ViewController" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem holdingPriority="260" id="o25-nl-bu2"/>
                         <splitViewItem id="99x-fO-CDi"/>
@@ -217,7 +244,7 @@
         <!--Source View Controller-->
         <scene sceneID="sV3-ey-uvG">
             <objects>
-                <viewController id="iuQ-VJ-Rgz" customClass="SourceViewController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iuQ-VJ-Rgz" customClass="SourceViewController" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Ngj-yY-2yl">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -226,7 +253,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
                                 <clipView key="contentView" drawsBackground="NO" id="ceb-8X-hfx">
                                     <rect key="frame" x="1" y="1" width="248" height="298"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="80" viewBased="YES" id="WkL-rv-nIi">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="298"/>
@@ -319,7 +346,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Yoq-iX-2fg">
             <objects>
-                <viewController id="ZLp-9r-GfK" customClass="DetailViewController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZLp-9r-GfK" customClass="DetailViewController" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="tg4-3s-K6y">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -345,4 +372,7 @@
             <point key="canvasLocation" x="730" y="872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSShareTemplate" width="11" height="16"/>
+    </resources>
 </document>
